@@ -1,0 +1,309 @@
+/* Marvel Comics Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* Spider-Man Colors */
+  --marvel-red: #E63946;
+  --marvel-red-dark: #C1121F;
+  --marvel-red-light: #FF6B6B;
+  --spider-blue: #1D3557;
+  --spider-blue-dark: #0F2744;
+  --spider-blue-light: #2D4F7F;
+  --marvel-black: #0A0A0A;
+  --marvel-black-light: #1A1A1A;
+  --marvel-white: #FFFFFF;
+  --marvel-gray: #808080;
+  --marvel-gray-dark: #404040;
+
+  /* Typography */
+  --font-hero: 'Anton', 'Impact', 'Arial Black', sans-serif;
+  --font-display: 'Bebas Neue', 'Arial Black', sans-serif;
+  --font-body: 'Roboto', 'Arial', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  --transition-slower: 700ms ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--marvel-black);
+  color: var(--marvel-white);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-hero);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 10vw, 8rem);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 5rem);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  text-transform: uppercase;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+a:hover {
+  color: var(--marvel-red);
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-primary {
+  background-color: var(--marvel-red);
+  color: var(--marvel-white);
+  padding: var(--space-md) var(--space-xl);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: var(--marvel-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(236, 29, 36, 0.5);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--marvel-white);
+  border: 2px solid var(--marvel-white);
+  padding: calc(var(--space-md) - 2px) calc(var(--space-xl) - 2px);
+}
+
+.btn-secondary:hover {
+  background-color: var(--marvel-white);
+  color: var(--marvel-black);
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
+}
+
+/* Section */
+section {
+  padding: var(--space-4xl) 0;
+  position: relative;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--marvel-white) 0%, var(--marvel-gray) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, var(--marvel-red) 0%, var(--marvel-red-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--marvel-red), 0 0 10px var(--marvel-red);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--marvel-red), 0 0 30px var(--marvel-red), 0 0 40px var(--marvel-red);
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-sm {
+  gap: var(--space-sm);
+}
+
+.gap-md {
+  gap: var(--space-md);
+}
+
+.gap-lg {
+  gap: var(--space-lg);
+}
+
+.gap-xl {
+  gap: var(--space-xl);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--marvel-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--marvel-red-dark);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--marvel-red);
+}
