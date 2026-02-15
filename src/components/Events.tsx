@@ -346,6 +346,59 @@ export const Events = () => {
             padding: var(--space-md);
           }
         }
+
+        @media (max-width: 480px) {
+          .events-list {
+            gap: var(--space-md);
+          }
+
+          .event-item {
+            border-left-width: 3px;
+          }
+
+          .event-number {
+            padding: var(--space-sm);
+            font-size: 1.3rem;
+            min-width: 50px;
+          }
+
+          .event-content {
+            padding: var(--space-md);
+          }
+
+          .event-meta {
+            gap: 6px;
+            flex-wrap: wrap;
+          }
+
+          .event-type {
+            padding: 4px 10px;
+            font-size: 0.7rem;
+          }
+
+          .event-date {
+            font-size: 0.8rem;
+          }
+
+          .event-title {
+            font-size: 1.1rem;
+          }
+
+          .event-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+          }
+
+          .event-action {
+            min-width: 44px;
+            padding: var(--space-sm);
+            font-size: 1.3rem;
+          }
+
+          .event-location {
+            font-size: 0.8rem;
+          }
+        }
       `}</style>
     </section>
   );

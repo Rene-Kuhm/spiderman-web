@@ -380,6 +380,57 @@ export const Newsletter = () => {
             grid-template-columns: 1fr;
           }
         }
+
+        @media (max-width: 480px) {
+          .newsletter {
+            padding: var(--space-3xl) 0 var(--space-lg);
+          }
+
+          .newsletter-content {
+            padding: var(--space-xl);
+          }
+
+          .newsletter-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+          }
+
+          .newsletter-title {
+            font-size: 1.5rem;
+          }
+
+          .newsletter-description {
+            font-size: 0.9rem;
+            margin-bottom: var(--space-xl);
+          }
+
+          .newsletter-input {
+            padding: var(--space-sm) var(--space-md);
+            font-size: 0.9rem;
+          }
+
+          .newsletter-button {
+            padding: var(--space-sm) var(--space-lg);
+            font-size: 0.9rem;
+          }
+
+          .newsletter-features {
+            gap: var(--space-sm);
+            margin-top: var(--space-xl);
+          }
+
+          .newsletter-feature {
+            padding: var(--space-sm);
+          }
+
+          .feature-icon {
+            font-size: 1.2rem;
+          }
+
+          .feature-text {
+            font-size: 0.8rem;
+          }
+        }
       `}</style>
     </section>
   );

@@ -299,16 +299,22 @@ export const Footer = () => {
 
         @media (max-width: 1024px) {
           .footer-top {
-            grid-template-columns: 1fr;
-            gap: var(--space-2xl);
+            flex-direction: column;
+            gap: var(--space-xl);
+            align-items: flex-start;
+          }
+
+          .footer-brand {
+            margin-bottom: var(--space-lg);
           }
 
           .footer-links {
-            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
           }
 
           .footer-social {
             text-align: left;
+            width: 100%;
           }
 
           .footer-social-links {
@@ -324,19 +330,73 @@ export const Footer = () => {
 
         @media (max-width: 768px) {
           .footer {
-            padding: var(--space-3xl) 0 var(--space-xl);
+            padding: var(--space-2xl) 0 var(--space-lg);
           }
 
           .footer-links {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
           }
 
           .footer-logo {
-            font-size: 2rem;
+            font-size: 1.6rem;
+          }
+
+          .footer-tagline {
+            font-size: 0.8rem;
           }
 
           .footer-social-links {
             flex-wrap: wrap;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .footer {
+            padding: var(--space-xl) 0 var(--space-md);
+          }
+
+          .footer-links {
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+          }
+
+          .footer-logo {
+            font-size: 1.4rem;
+          }
+
+          .footer-tagline {
+            font-size: 0.75rem;
+          }
+
+          .footer-link-title {
+            font-size: 0.8rem;
+          }
+
+          .footer-link-item a {
+            font-size: 0.75rem;
+          }
+
+          .footer-social-title {
+            font-size: 0.8rem;
+          }
+
+          .footer-social-link {
+            width: 32px;
+            height: 32px;
+            font-size: 1.2rem;
+          }
+
+          .footer-copyright {
+            font-size: 0.75rem;
+          }
+
+          .footer-disclaimer {
+            font-size: 0.7rem;
+          }
+
+          .footer-marvel-logo {
+            font-size: 1.4rem;
           }
         }
       `}</style>

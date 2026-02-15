@@ -85,14 +85,13 @@ export const Hero = () => {
             <img src="/spiderman-text.png" alt="Spider-Man" className="spiderman-title" />
           </div>
           <p className="my-2 item-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis velit
-            magna vitae mauris orci fames posuere nibh. Sit tellus amet
-            facilisi sit odio pulvinar scelerisque quam et. Ultrices facilisis nunc massa
-            diam, quis mi imperdiet.
+            With great power comes great responsibility. Experience the breathtaking adventure of Peter Parker 
+            as he swings through New York City, faces incredible villains, and discovers what it truly 
+            means to be Spider-Man. The next chapter begins now.
           </p>
           <div className="item-3">
-            <a href="#" className="btn">Pre-order now</a>
-            <a href="#" className="btn-secondary ml-2">Watch teaser</a>
+            <a href="#" className="btn">Play Now</a>
+            <a href="#" className="btn-secondary ml-2">Watch Trailer</a>
           </div>
           <div className="flex align-items-center mt-2 item-4">
             <img src="/ps.svg" alt="PlayStation" className="w-auto" />
@@ -373,8 +372,9 @@ export const Hero = () => {
           .container {
             flex-direction: column;
             min-height: auto;
-            padding: 120px 24px 60px;
+            padding: 100px 20px 50px;
             text-align: center;
+            gap: 30px;
           }
 
           .container-item-1 {
@@ -384,15 +384,23 @@ export const Hero = () => {
           }
 
           .spiderman-title {
-            max-width: 400px;
+            max-width: 350px;
           }
 
           .item-2 {
             max-width: 100%;
+            font-size: 16px;
           }
 
           .item-3 {
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+          }
+
+          .btn, .btn-secondary {
+            width: 100%;
+            max-width: 200px;
           }
 
           .item-4 {
@@ -403,12 +411,12 @@ export const Hero = () => {
             order: 1;
             justify-content: center;
             max-width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 0;
           }
 
           .spiderman {
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
             transform: translate3d(0, 0, 0) scale(1);
           }
 
@@ -419,28 +427,53 @@ export const Hero = () => {
 
         @media (max-width: 640px) {
           .container {
-            padding: 100px 16px 40px;
+            padding: 80px 16px 30px;
           }
 
           .spiderman-title {
-            max-width: 280px;
+            max-width: 260px;
           }
 
           .item-2 {
-            font-size: 15px;
+            font-size: 14px;
           }
 
           .btn, .btn-secondary {
-            padding: 12px 24px;
-            font-size: 13px;
+            padding: 11px 20px;
+            font-size: 12px;
+            width: 100%;
           }
 
           .item-4 {
-            gap: 16px;
+            gap: 12px;
           }
 
           .w-auto {
-            height: 28px;
+            height: 24px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .container {
+            padding: 60px 12px 20px;
+          }
+
+          .spiderman-title {
+            max-width: 220px;
+          }
+
+          .item-2 {
+            font-size: 13px;
+            line-height: 1.5;
+          }
+
+          .btn, .btn-secondary {
+            padding: 10px 16px;
+            font-size: 11px;
+          }
+
+          .w-auto {
+            height: 20px;
           }
         }
       `}</style>

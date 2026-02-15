@@ -433,6 +433,52 @@ export const Characters = () => {
           .character-name {
             font-size: 1.4rem;
           }
+
+          .character-description {
+            font-size: 0.9rem;
+          }
+
+          .btn-character {
+            padding: 12px 20px;
+            font-size: 0.9rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .characters-grid {
+            gap: 16px;
+          }
+
+          .character-image {
+            height: 180px;
+          }
+
+          .character-icon {
+            width: 120px;
+            height: 120px;
+          }
+
+          .character-content {
+            padding: 16px;
+          }
+
+          .character-alias {
+            font-size: 0.75rem;
+          }
+
+          .character-name {
+            font-size: 1.2rem;
+          }
+
+          .character-description {
+            font-size: 0.85rem;
+            line-height: 1.5;
+          }
+
+          .btn-character {
+            padding: 10px 16px;
+            font-size: 0.85rem;
+          }
         }
       `}</style>
     </section>
