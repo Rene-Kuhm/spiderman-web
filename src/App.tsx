@@ -4,6 +4,7 @@ import { Events } from './components/Events';
 import { Gallery } from './components/Gallery';
 import { Newsletter } from './components/Newsletter';
 import { Footer } from './components/Footer';
+import { FastCode } from './components/FastCode';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Events />
       <Gallery />
       <Newsletter />
+      <FastCode />
       <Footer />
     </>
   );
